@@ -17,7 +17,7 @@ try {
     stages {
       stage 'Build' {
         echo "Build stage started "
-        //echo "Build 2nd line"
+        echo "Build 2nd line"
       }
       stage 'Test' {
         echo "Test stage"
