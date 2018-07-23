@@ -12,12 +12,18 @@ echo "build ID : ${BUILD_ID}"
 
 echo "build number : ${env.BUILD_NUMBER}"
 echo "JOB NAME : ${env.JOB_NAME}"
-node {
-  stage 'Build' {
-  echo "Build stage started "
-  echo "Build 2nd line"
+try {
+  node {
+    stage 'Build' {
+      echo "Build stage started "
+      echo "Build 2nd line"
+    }
+    stage 'Test' {
+      echo "Test stage"
+    }
   }
-  stage 'Test' {
-  echo "Test stage"
-  }
+} catch(all) {
+  echo "exception : ${all}"
+} finally {
+  echo "finally executed"
 }
