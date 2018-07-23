@@ -13,7 +13,6 @@ echo "build number : ${env.BUILD_NUMBER}"
 echo "JOB NAME : ${env.JOB_NAME}"
 try {
   node {
-    stages {
       stage 'Build' {
         echo "Build stage started "
         echo "Build 2nd line"
@@ -21,7 +20,6 @@ try {
       stage 'Test' {
         echo "Test stage"
       }
-    }
   }
 } catch(all) {
   echo "exception : ${all}"
