@@ -2,7 +2,7 @@
 /**
  * It is testing jenkins file
 */
-
+/nvc
 def branch = "master"
 
 echo "print ${branch}"
@@ -12,3 +12,9 @@ echo "build ID : ${BUILD_ID}"
 
 echo "build number : ${env.BUILD_NUMBER}"
 echo "JOB NAME : ${env.JOB_NAME}"
+node {
+  stage 'Build'
+  echo "Build stage started "
+  echo "Build 2nd line"
+  stage 'Test'
+}
