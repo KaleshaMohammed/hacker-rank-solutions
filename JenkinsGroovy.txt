@@ -2,7 +2,6 @@
 /**
  * It is testing jenkins file
 */
-/nvc
 def branch = "master"
 
 echo "print ${branch}"
